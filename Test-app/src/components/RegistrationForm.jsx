@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
+import Navbar from './Navbar';
 
+
+// eslint-disable-next-line react/prop-types
 const RegistrationForm = ({ onRegister }) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -29,7 +32,7 @@ const RegistrationForm = ({ onRegister }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const currentYear = new Date().getFullYear();
+    
     if (!formData.email.match(/\S+@\S+\.\S+/)) {
       alert('Please enter a valid email address.');
       return;
@@ -42,17 +45,20 @@ const RegistrationForm = ({ onRegister }) => {
   };
 
   return (
+    <div>
+      <Navbar className='navbar-reg'/>
     <div className='d-flex justify-content-center align-items-center '>
-      <div className="card shadow  col-sm-3 col-lg-12" style={{ width: '140%', maxWidth: '40rem' }}>
+      
+      <div className="card shadow  col-sm-3 col-lg-12" style={{ maxWidth: '30rem' }}>
         <div className="card-header bg-primary text-white">
           <h3 className="card-title">Registration Form</h3>
         </div>
         <div className="card-body">
           <form onSubmit={handleSubmit}>
             {/* Candidate Name */}
-            <div className="mb-3 row">
+            <div className="mb-3 row justify-content-evenly">
               <label htmlFor="name" className="col-sm-3 col-form-label col-lg-4">Candidate Name:</label>
-              <div className="col-sm-9 col-lg-5">
+              <div className="col-sm-9 col-lg-6">
                 <input
                   type="text"
                   className="form-control"
@@ -66,9 +72,9 @@ const RegistrationForm = ({ onRegister }) => {
             </div>
 
             {/* Gender */}
-            <div className="mb-3 row">
+            <div className="mb-3 row justify-content-evenly">
               <label htmlFor="gender" className="col-sm-3 col-form-label col-lg-4">Gender:</label>
-              <div className="col-sm-9 col-lg-5">
+              <div className="col-sm-9 col-lg-6">
                 <select
                   id="gender"
                   name="gender"
@@ -86,9 +92,9 @@ const RegistrationForm = ({ onRegister }) => {
             </div>
 
             {/* Email */}
-            <div className="mb-3 row">
+            <div className="mb-3 row justify-content-evenly">
               <label htmlFor="email" className="col-sm-3 col-form-label col-lg-4">Email:</label>
-              <div className="col-sm-9 col-lg-5">
+              <div className="col-sm-9 col-lg-6">
                 <input
                   type="email"
                   className="form-control"
@@ -102,9 +108,9 @@ const RegistrationForm = ({ onRegister }) => {
             </div>
 
             {/* Contact */}
-            <div className="mb-3 row">
+            <div className="mb-3 row justify-content-evenly">
               <label htmlFor="contact" className="col-sm-3 col-form-label col-lg-4">Contact Number:</label>
-              <div className="col-sm-9 col-lg-5">
+              <div className="col-sm-9 col-lg-6">
                 <input
                   type="text"
                   className="form-control"
@@ -119,9 +125,9 @@ const RegistrationForm = ({ onRegister }) => {
             </div>
 
             {/* Registration Date */}
-            <div className="mb-3 row">
+            <div className="mb-3 row justify-content-evenly">
               <label htmlFor="registrationDate" className="col-sm-3 col-form-label col-lg-4">Registration Date:</label>
-              <div className="col-sm-9 col-lg-5">
+              <div className="col-sm-9 col-lg-6">
                 <input
                   type="date"
                   className="form-control"
@@ -134,9 +140,9 @@ const RegistrationForm = ({ onRegister }) => {
             </div>
 
             {/* Source */}
-            <div className="mb-3 row">
+            <div className="mb-3 row justify-content-evenly">
               <label htmlFor="source" className="col-sm-3 col-form-label col-lg-4">Source:</label>
-              <div className="col-sm-9 col-lg-5">
+              <div className="col-sm-9 col-lg-6">
                 <select
                   id="source"
                   name="source"
@@ -154,9 +160,9 @@ const RegistrationForm = ({ onRegister }) => {
             </div>
 
             {formData.source === 'College' && (
-              <div className="mb-3 row">
+              <div className="mb-3 row justify-content-evenly">
                 <label htmlFor="collegeName" className="col-sm-3 col-form-label col-lg-4">College Name:</label>
-                <div className="col-sm-9 col-lg-5">
+                <div className="col-sm-9 col-lg-6">
                   <input
                     type="text"
                     className="form-control"
@@ -171,9 +177,9 @@ const RegistrationForm = ({ onRegister }) => {
             )}
 
             {formData.source === 'Reference' && (
-              <div className="mb-3 row">
+              <div className="mb-3 row justify-content-evenly">
                 <label htmlFor="employeeId" className="col-sm-3 col-form-label col-lg-4">Employee ID:</label>
-                <div className="col-sm-9 col-lg-5">
+                <div className="col-sm-9 col-lg-6">
                   <input
                     type="text"
                     className="form-control"
@@ -188,9 +194,9 @@ const RegistrationForm = ({ onRegister }) => {
             )}
 
             {/* Qualification */}
-            <div className="mb-3 row">
+            <div className="mb-3 row justify-content-evenly">
               <label htmlFor="qualification" className="col-sm-3 col-form-label col-lg-4">Qualification:</label>
-              <div className="col-sm-9 col-lg-5">
+              <div className="col-sm-9 col-lg-6">
                 <select
                   id="qualification"
                   name="qualification"
@@ -210,9 +216,9 @@ const RegistrationForm = ({ onRegister }) => {
             </div>
 
             {/* Stream */}
-            <div className="mb-3 row">
+            <div className="mb-3 row justify-content-evenly">
               <label htmlFor="stream" className="col-sm-3 col-form-label col-lg-4">Stream:</label>
-              <div className="col-sm-9 col-lg-5">
+              <div className="col-sm-9 col-lg-6">
                 <select
                   id="stream"
                   name="stream"
@@ -234,9 +240,9 @@ const RegistrationForm = ({ onRegister }) => {
             </div>
 
             {/* Year of Passing */}
-            <div className="mb-3 row">
+            <div className="mb-3 row justify-content-evenly">
               <label htmlFor="yearOfPassing" className="col-sm-3 col-form-label col-lg-4">Year of Passing:</label>
-              <div className="col-sm-9 col-lg-5">
+              <div className="col-sm-9 col-lg-6">
                 <select
                   id="yearOfPassing"
                   name="yearOfPassing"
@@ -253,9 +259,9 @@ const RegistrationForm = ({ onRegister }) => {
             </div>
 
             {/* Job Applied For */}
-            <div className="mb-3 row">
+            <div className="mb-3 row justify-content-evenly">
               <label htmlFor="jobApplied" className="col-sm-3 col-form-label col-lg-4">Job Applied For:</label>
-              <div className="col-sm-9 col-lg-5">
+              <div className="col-sm-9 col-lg-6">
                 <input
                   type="text"
                   className="form-control"
@@ -269,9 +275,9 @@ const RegistrationForm = ({ onRegister }) => {
             </div>
 
             {/* Payment */}
-            <div className="mb-3 row">
+            <div className="mb-3 row justify-content-evenly">
               <label htmlFor="payment" className="col-sm-3 col-form-label col-lg-4">Payment:</label>
-              <div className="col-sm-9 col-lg-7">
+              <div className="col-sm-9 col-lg-6">
                 <input
                   type="number"
                   className="form-control"
@@ -287,6 +293,7 @@ const RegistrationForm = ({ onRegister }) => {
             <button type="submit" className="btn btn-primary w-100">Register</button>
           </form>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const TestPage = ({ questions, onSubmit }) => {
   const [answers, setAnswers] = useState({});
   const [questionIndex, setQuestionIndex] = useState(0);
+  // eslint-disable-next-line no-unused-vars
   const navigate = useNavigate();
 
   const handleAnswerChange = (e) => {
@@ -39,6 +43,7 @@ const TestPage = ({ questions, onSubmit }) => {
 
   return (
     <div className="container">
+      <Navbar />
       <h2>Test Page</h2>
       <div>
         <h3>{currentQuestion.question}</h3>

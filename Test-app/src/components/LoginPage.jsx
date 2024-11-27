@@ -1,36 +1,46 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom"; // For navigation
 import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./Navbar";
+
 
 const LoginPage = () => {
   const [adminUsername, setAdminUsername] = useState("");
   const [adminPassword, setAdminPassword] = useState("");
+  const [userEmail, setUserEmail] = useState("");
+  const [userPassword, setUserPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
 
   const handleAdminLogin = (e) => {
     e.preventDefault();
-
-    // Check admin credentials
     if (adminUsername === "admin" && adminPassword === "admin123") {
       setErrorMessage("");
-      navigate("/admin"); // Redirect to admin page
+      navigate("/admin");
     } else {
       setErrorMessage("Invalid admin credentials. Please try again.");
     }
   };
 
-  return (
-    <div className="text-white" style={{ minHeight: "100vh" }}>
-      {/* Navbar */}
-      <nav className="navbar navbar-dark bg-dark">
-        <div className="container-fluid">
-          <span className="navbar-brand mb-0 h1">Logo</span>
-          <span className="text-center w-100 h1">Quest Informatics</span>
-        </div>
-      </nav>
+  const handleUserLogin = (e) => {
+    e.preventDefault();
+    // For simplicity, only validation without backend logic
+    if (userEmail && userPassword) {
+      setErrorMessage("");
+      alert("User login successful (backend logic needed here)");
+      // Navigate to user dashboard if needed
+    } else {
+      setErrorMessage("Please provide valid email and password.");
+    }
+  };
 
+  return (
+    <div>
+    {/* <Navbar className='navbar-log'/> */}
+
+    <div className=" text-white login" style={{ minHeight: "100vh" }}>
+      <Navbar className='navbar-log'/>
       {/* Main Section */}
       <div className="container d-flex justify-content-center align-items-center" style={{ minHeight: "90vh" }}>
         <div className="row w-100">
@@ -38,7 +48,7 @@ const LoginPage = () => {
           <div className="col-lg-6 mb-3">
             <div className="card bg-secondary text-white shadow-lg">
               <div className="card-body">
-                <h4 className="card-title text-center">Welcome Back - Admin Login</h4>
+                <h4 className="card-title text-center">Admin Login</h4>
                 <form onSubmit={handleAdminLogin}>
                   <div className="mb-3">
                     <label htmlFor="adminUsername" className="form-label">Username</label>
@@ -75,39 +85,45 @@ const LoginPage = () => {
           <div className="col-lg-6 mb-3">
             <div className="card bg-secondary text-white shadow-lg">
               <div className="card-body">
-                <h4 className="card-title text-center">Welcome Back - User Login</h4>
-                <form>
-                  <div className="row">
-                    <div className="mb-3 col-md-6">
-                      <label htmlFor="userFirstName" className="form-label">First Name</label>
-                      <input type="text" className="form-control" id="userFirstName" required />
-                    </div>
-                    <div className="mb-3 col-md-6">
-                      <label htmlFor="userLastName" className="form-label">Last Name</label>
-                      <input type="text" className="form-control" id="userLastName" required />
-                    </div>
-                  </div>
+                <h4 className="card-title text-center">User Login</h4>
+                <form onSubmit={handleUserLogin}>
                   <div className="mb-3">
-                    <label htmlFor="userEmail" className="form-label">Email or Phone</label>
-                    <input type="email" className="form-control" id="userEmail" required />
+                    <label htmlFor="userEmail" className="form-label">Email</label>
+                    <input
+                      type="email"
+                      className="form-control"
+                      id="userEmail"
+                      placeholder="Enter your email"
+                      value={userEmail}
+                      onChange={(e) => setUserEmail(e.target.value)}
+                      required
+                    />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="userPassword" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="userPassword" required />
+                    <input
+                      type="password"
+                      className="form-control"
+                      id="userPassword"
+                      placeholder="Enter your password"
+                      value={userPassword}
+                      onChange={(e) => setUserPassword(e.target.value)}
+                      required
+                    />
                   </div>
-                  <div className="form-check">
-                    <input type="checkbox" className="form-check-input" id="acceptTerms" required />
-                    <label className="form-check-label" htmlFor="acceptTerms">
-                      By Signing Up You Accept The <a href="#" className="text-light">Terms Of Service</a> and <a href="#" className="text-light">Privacy Policy</a>.
-                    </label>
-                  </div>
-                  <button type="submit" className="btn btn-primary w-100 mt-3">Sign Up</button>
+                  {errorMessage && <div className="text-danger mb-3">{errorMessage}</div>}
+                  <button type="submit" className="btn btn-primary w-100">Sign In</button>
                 </form>
+                <div className="text-center mt-3">
+                  <span> Don&apos;t have an account? </span>
+                  <a href="/register" className="text-light text-decoration-underline">Register here</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

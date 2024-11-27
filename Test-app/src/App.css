@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Faculty+Glyphic&family=Jaro:opsz@6..72&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Play:wght@400;700&display=swap');
+
+
+.navbar{
+    background-image:  url("./assets/intersecting-waves-scattered.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-reg{
+    background-image:  url("./assets/pyramid-divider.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-log{
+    background-image:  url("./assets/grunge-divider-3.png");
+    background-size: cover;
+    background-position: center;
+}
+
+ /* <uniquifier>: Use a unique and descriptive class name */
+
+.jaro-sxcs {
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* <weight>: Use a value from 200 to 1000 */
+
+.nunito-nun {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.faculty-glyphic-regular {
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.exo-2-exo {
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.play-regular {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.play-bold {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+.bree-serif-regular {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+  }
+
+.login{
+    background-image:  url("./assets/cornered-stairsone.png");
+    background-size: cover;
+    background-position: center;
+}
+  
