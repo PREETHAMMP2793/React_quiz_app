@@ -6,24 +6,27 @@ import ResultPage from './components/ResultPage';
 import AdminPage from './components/AdminPage';
 import LoginPage from './components/LoginPage';
 import questions from './data/questions.json';
+import Instructions from './components/instructions';
 
 // import logo from './assets/logo-removebg-preview.png'
 import './App.css'
+
 
 const App = () => {
   const [candidates, setCandidates] = useState([]);
   const [score, setScore] = useState(0);
   // eslint-disable-next-line no-unused-vars
-  const [answers, setAnswers] = useState([]);
+  const [answers, setAnswers] = useState({});
 
   // eslint-disable-next-line no-unused-vars
   const handleRegister = (formData) => {
     // Handle registration logic
   };
 
-  const handleSubmitTest = (score) => {
-    setScore(score);
-    setCandidates([...candidates, { name: "John Doe", score }]); // Sample candidate
+  const handleSubmitTest = (finalScore, finalAnswers) => {
+    setScore(finalScore);
+    setAnswers(finalAnswers); // Store the user's answers
+    setCandidates([...candidates, { name: "John Doe", score: finalScore }]); // Sample candidate
   };
 
   return (
@@ -33,8 +36,9 @@ const App = () => {
         <Route path="/" element={<LoginPage />} />
           <Route path="/register" element={<RegistrationForm onRegister={handleRegister} />} />
           <Route path="/test" element={<TestPage questions={questions} onSubmit={handleSubmitTest} />} />
-          <Route path="/result" element={<ResultPage score={score} questions={questions} answers={answers} />} />
+          <Route path="/result" element={<ResultPage score={score} questions={questions} answers={answers} userDetails={{name:'abc',email:'abc@gmail.com'}} candidates={candidates}/>} />
           <Route path="/admin" element={<AdminPage candidates={candidates} />} />
+          <Route path='/instructions' element={<Instructions/>} />
         </Routes>
       </Router>
     </div>

@@ -1,0 +1,9 @@
+.ins-bg{
+    background-image: url('../assets/backgrounds/ins-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    font-size: 18px;
+}

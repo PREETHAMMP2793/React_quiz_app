@@ -1,13 +1,75 @@
 [
-    {
-      "question": "What is the capital of France?",
-      "options": ["Berlin", "Paris", "Rome", "Madrid"],
-      "answer": "Paris"
-    },
-    {
-      "question": "What is 2 + 2?",
-      "options": ["3", "4", "5", "6"],
-      "answer": "4"
-    }
-  ]
+  {
+    "category": "Math",
+    "question": "What is 5 + 3?",
+    "options": ["6", "7", "8", "9"],
+    "answer": "8"
+  },
+  {
+    "category": "Math",
+    "question": "What is 12 x 12?",
+    "options": ["120", "144", "160", "180"],
+    "answer": "144"
+  },
+  {
+    "category": "Math",
+    "question": "What is the square root of 49?",
+    "options": ["6", "7", "8", "9"],
+    "answer": "7"
+  },
+  {
+    "category": "Math",
+    "question": "What is 15 divided by 3?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5"
+  },
   
+  {
+    "category": "Science",
+    "question": "What is the chemical symbol for water?",
+    "options": ["H2O", "O2", "CO2", "NaCl"],
+    "answer": "H2O"
+  },
+  {
+    "category": "Science",
+    "question": "What gas do plants absorb from the air for photosynthesis?",
+    "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
+    "answer": "Carbon Dioxide"
+  },
+  {
+    "category": "Science",
+    "question": "Which planet is closest to the Sun?",
+    "options": ["Earth", "Venus", "Mercury", "Mars"],
+    "answer": "Mercury"
+  },
+  {
+    "category": "Science",
+    "question": "What is the main function of the heart?",
+    "options": ["To pump blood", "To digest food", "To filter toxins", "To control breathing"],
+    "answer": "To pump blood"
+  },
+  {
+    "category": "Geography",
+    "question": "What is the longest river in the world?",
+    "options": ["Amazon River", "Nile River", "Yangtze River", "Mississippi River"],
+    "answer": "Nile River"
+  },
+  {
+    "category": "Geography",
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "options": ["China", "South Korea", "Japan", "Thailand"],
+    "answer": "Japan"
+  },
+  {
+    "category": "Geography",
+    "question": "Which continent is known as the 'Dark Continent'?",
+    "options": ["Asia", "Africa", "Australia", "Antarctica"],
+    "answer": "Africa"
+  },
+  {
+    "category": "Geography",
+    "question": "What is the smallest country in the world?",
+    "options": ["Vatican City", "Monaco", "Nauru", "San Marino"],
+    "answer": "Vatican City"
+  }
+]

@@ -1,0 +1,69 @@
+/* Main Card */
+.main-card {
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
+    color: white; /* Ensure text is visible on the transparent background */
+    backdrop-filter: blur(2px); /* Optional: Adds a blur effect to the background */
+    padding: 20px;
+  }
+  
+  
+  /* Login Cards Hover Animation */
+  .login-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border: none; /* Remove card borders for a cleaner look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .login-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Input Fields Animation */
+  .input-animate {
+    transition: all 0.3s ease;
+  }
+  
+  .input-animate:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 576px) {
+    .main-card {
+      padding: 10px;
+    }
+    .card-title {
+      font-size: 18px;
+    }
+  }
+
+  .loginbg{
+    background-image: url('../assets/backgrounds/login-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .card-img-top{
+    width: 200px;
+    height: auto;
+    align-items: center;
+  }
+
+  .nunito-nun {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .faculty-glyphic-regular {
+      font-family: "Faculty Glyphic", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }

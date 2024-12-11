@@ -2,19 +2,7 @@
 
 
 .navbar{
-    background-image:  url("./assets/intersecting-waves-scattered.png");
-    background-size: cover;
-    background-position: center;
-}
-
-.navbar-reg{
-    background-image:  url("./assets/pyramid-divider.png");
-    background-size: cover;
-    background-position: center;
-}
-
-.navbar-log{
-    background-image:  url("./assets/grunge-divider-3.png");
+    background-image:  url("./assets/layered-wave.png");
     background-size: cover;
     background-position: center;
 }
@@ -75,4 +63,3 @@
     background-size: cover;
     background-position: center;
 }
-  
